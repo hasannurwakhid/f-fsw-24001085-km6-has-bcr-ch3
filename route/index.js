@@ -4,6 +4,6 @@ const carRoute = require("./car");
 
 router.use("/cars", carRoute);
 
-router.use("/rent-cars", rentCarRoute);
+// router.use("/rent-cars", rentCarRoute);
 
 module.exports = router;
