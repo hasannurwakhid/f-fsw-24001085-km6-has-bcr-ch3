@@ -1,5 +1,11 @@
 const carRepo = require("../../repository/car");
 
+
+exports.searchCars = (req) => {
+  const data = carRepo.searchCars(req);
+  return data;
+};
+
 exports.getCars = () => {
   const data = carRepo.getCars();
   return data;

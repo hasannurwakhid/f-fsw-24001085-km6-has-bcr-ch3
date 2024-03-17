@@ -88,7 +88,13 @@
         <div class="container mb-5">
           <div class="row d-flex justify-content-center">
             <div class="col-md-10 rounded bg-body-secondary">
-              <form class="p-3" action="/rent-cars" method="post" role="search" id="search-car">
+              <form
+                class="p-3"
+                action="/rent-cars"
+                method="post"
+                role="search"
+                id="search-car"
+              >
                 <div
                   class="row align-items-end d-flex justify-content-around g-3"
                 >
@@ -100,7 +106,12 @@
                     </div>
                     <div class="row">
                       <div class="col-12">
-                        <input id="tanggal" name="tanggal" type="date" class="form-control" />
+                        <input
+                          id="tanggal"
+                          name="tanggal"
+                          type="date"
+                          class="form-control"
+                        />
                       </div>
                     </div>
                   </div>
@@ -114,7 +125,11 @@
                     </div>
                     <div class="row">
                       <div class="col-12">
-                        <select id="waktu-jemput" name="waktu-jemput" class="form-select">
+                        <select
+                          id="waktu-jemput"
+                          name="waktu-jemput"
+                          class="form-select"
+                        >
                           <option value="08:00">08:00 WIB</option>
                           <option value="09:00">09:00 WIB</option>
                           <option value="10:00">10:00 WIB</option>
@@ -171,7 +186,51 @@
             </div>
 
             <div class="row" id="car-rent">
-              <!-- tempat card mobil -->
+              <% cars.forEach(car => { %>
+              <div class="col-md-4 d-flex">
+                <div class="card mb-4 flex-fill">
+                  <div class="card-body p-4 d-flex flex-column">
+                    <img
+                      src="<%= car.image %>"
+                      class="img-fluid mb-4 rounded"
+                      alt="..."
+                    />
+                    <p class="card-text"><%= car.model %></p>
+                    <h5 class="card-title mb-3">
+                      Rp <%= car.rentPerDay.toLocaleString().replace(",", ".")
+                      %> / hari
+                    </h5>
+                    <p class="card-text"><%= car.description %></p>
+                    <div class="mb-2">
+                      <img class="me-2" src="assets/fi_users.png" alt="" /><%=
+                      car.capacity %> Orang
+                    </div>
+                    <div class="mb-2">
+                      <img
+                        class="me-2"
+                        src="assets/fi_settings.png"
+                        alt=""
+                      /><%= car.transmission %>
+                    </div>
+                    <div class="mb-2">
+                      <img
+                        class="me-2"
+                        src="assets/fi_calendar.png"
+                        alt=""
+                      />Tahun <%= car.year %>
+                    </div>
+                    <div class="mt-auto">
+                      <a
+                        href="#"
+                        class="btn col-12 text-white"
+                        style="background-color: #5cb85f"
+                        >Pilih Mobil</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% }); %>
             </div>
           </div>
         </div>

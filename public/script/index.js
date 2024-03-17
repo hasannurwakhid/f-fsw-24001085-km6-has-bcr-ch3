@@ -63,6 +63,8 @@ function fungsiMenampilkan(arr) {
 }
 
 buttonCariMobil.addEventListener("submit", (event) => {
+  console.log(tanggal.value, waktu_jemput.value, jumlah_penumpang.value);
+
   event.preventDefault();
   tempatFilter.innerHTML = `
                 <label class="form-label" for="sortYear">Urutkan Tahun</label>
