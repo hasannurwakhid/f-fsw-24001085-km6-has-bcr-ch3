@@ -123,7 +123,12 @@
         <div class="row mb-4">
           <div class="col-lg-3" id="tempatFilter">
             <% if (typeof cars !== 'undefined') { %>
-             
+            <label class="form-label" for="sortYear">Urutkan Tahun</label>
+            <select id="sortYear" name="sortYear" class="form-select">
+              <option value="paling-sesuai" selected>Paling sesuai</option>
+              <option value="terbaru">Terbaru</option>
+              <option value="terlama">Terlama</option>
+            </select>
             <% } %>
             <!-- tempat sort tahun -->
           </div>
@@ -174,3 +179,5 @@
     </div>
   </div>
 </div>
+
+<script src="script/sortYear.js"></script>

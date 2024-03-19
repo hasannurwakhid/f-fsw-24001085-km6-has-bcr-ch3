@@ -4,6 +4,8 @@ const path = require("path");
 exports.tampilHalaman = (req, res) => {
   // res.sendFile(path.join(__dirname, "../views", "sewa-mobil.html"));
   res.render("sewa-mobil", { layout: "layouts/main-layout" });
+
+  
 };
 
 exports.searchCar = (req, res) => {
@@ -15,5 +17,6 @@ exports.searchCar = (req, res) => {
   //   message: null,
   // };
 
-  // res.status(200).json(response);
+  // const inputan = req.query.sortYear;
+  // console.log(data);
 };
