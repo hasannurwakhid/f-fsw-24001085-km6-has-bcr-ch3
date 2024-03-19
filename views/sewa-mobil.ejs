@@ -180,4 +180,8 @@
   </div>
 </div>
 
-<script src="script/sortYear.js"></script>
+<% if (typeof cars !== 'undefined') { %>
+<div id="carsData" style="display: none"><%= JSON.stringify(cars) %></div>
+<% } %>
+
+<script src="script/sortingCar.js"></script>
